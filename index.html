@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="table">
+        <div class="row">
+            <div class="container">
+                <div class="form">
+                    <img src="image12.png" alt="" style="width: 415px; cursor: pointer;">
+                    <h1 style="display: flex;">Flakon Seçin:</h1>
+                    <div class="image-selection">
+                        <img src="https://static.vecteezy.com/system/resources/previews/026/791/364/original/watercolor-perfume-bottle-flakon-ai-generative-png.png"
+                            alt="Flakon 1" class="flakon" onclick="selectImage(this)">
+                        <div class="button"><a href="#"> BUTTON </a></div>
+
+                        <img src="https://png.pngtree.com/png-vector/20240406/ourmid/pngtree-vintage-perfume-bottle-isolated-on-transparent-png-image_12260605.png"
+                            alt="Flakon 2" class="flakon" onclick="selectImage(this)">
+                        <div class="button"><a href="#"> BUTTON </a></div>
+
+
+                        <img src="https://img.pikbest.com/png-images/20240517/luxury-perfume-and-cosmetics-products-bottle-png-isolated-on-transparent-background_10569218.png!sw800"
+                            alt="Flakon 3" class="flakon" onclick="selectImage(this)">
+
+                        <div class="button"><a href="#"> BUTTON </a></div>
+
+                        <img src="https://daum.fr/app/uploads/2021/09/05735_C-Camelia-Flacon-a-parfum.png"
+                            alt="Flakon 4" class="flakon" onclick="selectImage(this)">
+                        <div class="button"><a href="#"> BUTTON </a></div>
+
+
+                        <img src="https://img1.picmix.com/output/stamp/normal/0/4/2/7/1487240_03be9.png" alt="Flakon 5"
+                            class="flakon" onclick="selectImage(this)">
+
+
+                        <div class="type">
+                            <h2 style="display: flex;">Parfüm Növü:</h2>
+                            <select class="form-select" aria-label="Default select example"
+                                style="display: flex; width: 402px; height: 24px;">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function selectImage(image) {
+            // Eğer zaten seçili ise, seçimi kaldır
+            if (image.classList.contains('selected')) {
+                image.classList.remove('selected');
+            } else {
+                // Önce diğer tüm resimlerin seçimini kaldır
+                var images = document.querySelectorAll('.image-selection img');
+                images.forEach(function (img) {
+                    img.classList.remove('selected');
+                });
+                // Tıklanan resmi seç
+                image.classList.add('selected');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

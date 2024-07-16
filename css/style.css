@@ -1,0 +1,86 @@
+body {
+  background-color: #58DDEB;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  width: 1080px;
+  height: 550px;
+  text-align: center;
+}
+
+.row {
+  display: grid;
+  justify-content: center;
+}
+
+.flakon {
+  width: 100px;
+  cursor: pointer;
+  filter: saturate(30%);
+  border: 2px solid seashell;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 70px;
+  transition: all ease 0.4s;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  border-color: #58DDEB;
+}
+
+.flakon:hover {
+  position: relative;
+  width: 80px;
+  transition: 0.5s;
+  background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+  animation: animate 4s linear infinite;
+  border-radius: 15px;
+  filter: saturate(100%);
+  box-shadow: 0 0 20px 0px #00fffc, 0 0 40px #00fffc, 0 0 60px #00fffc;
+  transform: scale(2);
+  /* Büyütme efekti */
+  transform-origin: center center;
+  z-index: 10;
+
+}
+
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+
+  100% {
+    --a: 360deg;
+  }
+}
+
+
+.selected{
+  width: 100px;
+  cursor: pointer;
+  filter: saturate(0%);
+  border: 2px solid seashell;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: all ease 0.4s;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+  animation: animate 4s linear infinite;
+  box-shadow: 0 0 20px 0px #ff2770, 0 0 40px #ff2770, 0 0 60px #00fffc;
+  filter: saturate(100%);
+
+}
+
+
+
+
+
+
